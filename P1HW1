@@ -1,0 +1,19 @@
+# Janiya Barrett
+# 2/16/24
+# P1HW1
+# Basic output with variables
+
+num1 = input("Enter integer:\n")
+
+print("You entered: ", num1)
+
+num1 = int(num1)
+
+print(num1, "squared is", num1**2)
+
+print("And", num1, "cubed is", num1**3, "!!")
+
+num2 = input("Enter another integer:\n")
+num2 = int(num2)
+print(num1, "+", num2, "is", num1 + num2)
+print(num1, "*", num2, "is", num1*num2)
