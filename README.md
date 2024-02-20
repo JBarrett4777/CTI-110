@@ -1,2 +1,2 @@
 # CTI-110
-introduction to python
+Introduction to Python
