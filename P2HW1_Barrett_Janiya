@@ -1,0 +1,43 @@
+#Janiya Barrett
+#2/29/24
+#P2HW1
+#Add on to P1HW2
+
+#Ask user to enter their budget
+#Ask user to enter travel destination
+#Ask user for amount they will spend on gas
+#Ask user for amount they will spend on accommodation
+#Ask user for amount they will spend on food
+#Add expenses
+#Subtract expenses from budget
+#Display results
+
+print("This program calculates and displays travel expenses")
+print()
+budg = input("Enter Budget: ")
+budg = int(budg)
+print()
+des = input("Enter your tavel destination: ")
+print()
+gas = input("How much do you think you will spend on gas? ")
+gas = int(gas)
+print()
+hot = input("Approximately, how much do you think you will need for accomodation/hotel? ")
+hot = int(hot)
+print()
+food = input("Last, how much do you need for food? ")
+food = int(food)
+
+exp = food + hot + gas
+rem = budg - exp
+print()
+
+print("------------Travel Expenses------------")
+print("Location: ", des) 
+print(f"Inital Budget: ${budg:.2f}") 
+print()
+print(f"Fuel: ${gas:.2f}")
+print(f"Accomodation: ${hot:.2f}")
+print(f"Food: ${food:.2f}")
+print()
+print(f"Remaining Balance: ${rem:.2f}")
