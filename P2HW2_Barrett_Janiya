@@ -1,0 +1,11 @@
+#Janiya Barrett
+#3/6/24
+#P2HW2
+#basic lists
+
+#Asks the user to enter grades for module 1-6
+#store grades in a list
+#Display the lowest grade, highest grade, Sum of grades, and the average
+
+print("Enter grade for modle 1: ")
+ml = input()
