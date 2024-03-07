@@ -1,11 +1,33 @@
 #Janiya Barrett
-#3/6/24
+#2/6/24
 #P2HW2
-#basic lists
+#Basic lists
 
-#Asks the user to enter grades for module 1-6
-#store grades in a list
-#Display the lowest grade, highest grade, Sum of grades, and the average
+'''
+Ask user for grade values
+Store the grades in a list
+Get the smallest value in the list
+Get the largest value in the list
+Get the sum of all the values in the list
+Get the average of all values in the list
+'''
 
-print("Enter grade for modle 1: ")
-ml = input()
+num1 = float(input("Enter grade for Module 1: "))
+num2 = float(input("Enter grade for Module 2: "))
+num3 = float(input("Enter grade for Module 3: "))
+num4 = float(input("Enter grade for Module 4: "))
+num5 = float(input("Enter grade for Module 5: "))
+num6 = float(input("Enter grade for Module 6: "))
+
+grade_list = [num1, num2, num3, num4, num5, num6]
+print()
+print("------------Results------------")
+list_min = min(grade_list)
+print(f"Lowest Grade: {list_min}")
+list_max = max(grade_list)
+print(f"Highest Grade: {list_max}")
+list_sum = sum(grade_list)
+print(f"Sum of Grades: {list_sum}")
+list_length = len(grade_list)
+list_avg = list_sum/list_length
+print(f"Average: {list_avg:.2f}")
