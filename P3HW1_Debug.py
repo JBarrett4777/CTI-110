@@ -16,23 +16,23 @@ mod_6 = input('Enter grade for Module 6: ')
 
 # add grades entered to a list
 
-grades = [mod_1, mod_2, mod_3, mod_4, mod_5, mod_6]
+grade_list = [mod_1, mod_2, mod_3, mod_4, mod_5, mod_6]
 # TO DO: determine lowest, highest , sum and average for grades
 
-grade_min = min(grades)
-grade_max = max(grades)
-grade_sum = sum(grades)
-
-grade_avg = 
+list_min = min(grade_list)
+list_max = max(grade_list)
+list_sum = sum(grade_list)
+list_length = len(grade_list)
+list_avg = list_sum/list_length
 
 # determine letter grade for average
 
 
-if avg >= 90:
+if list_avg >= 90:
  print('Your grade is: A')
 else:
  print()
-if avg > 80:
+if list_avg > 80:
  print('Your grade is: B')
 else:
  print('')
