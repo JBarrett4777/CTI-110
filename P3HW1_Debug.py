@@ -1,5 +1,7 @@
-# I was supposed to put a comment here
-# My Last Name
+#Janiya Barrett
+#3/15/24
+#P3HW1
+#Fixing code
 
 
 # This program takes a number grade , determines average and displays letter grade for average.
