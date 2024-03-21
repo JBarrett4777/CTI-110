@@ -15,24 +15,22 @@ Display gross pay
 name = input("Enter employee's name: ")
 hours = float(input("Enter number of hours worked: "))
 pay_rate = float(input("Enter employee's pay rate: "))
-overtime = (hours - 40)
-reg_hours = (hours - overtime)
-#finish this!!!!! (Probably finished it already!)
-overtime_pay = (overtime * pay_rate)
+overtime_rate = (pay_rate * 1.5)
+
+if hours > 40:
+    overtime = (hours - 40)
+    reg_hours = (hours - overtime)
+else:
+    overtime = 0
+    reg_hours = (hours - overtime)
+
+overtime_pay = (overtime * overtime_rate)
 reg_pay = (reg_hours * pay_rate)
 gross_pay = (reg_pay + overtime_pay)
-txt1 = "Hours Worked"
-txt2 = "Pay Rate"
-txt3 = "OverTime"
-txt4 = "OverTime Pay"
-txt5 = "RegHour Pay"
-txt6 = "Gross Pay"
 
 print("----------------------------------------")
 print(f"Employee name: {name}")
 print()
-
-print(f'{txt1:<15}{txt2:<10}{txt3:<10}{txt4:<15}{txt5:<15}{txt6:<15}')
+print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'OverTime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<15}")
 print("--------------------------------------------------------------------------------")
-#FINISH OUTPUT!!!!
-print(f'{hours:<15}{pay_rate:<10}')
+print(f'{hours:<15}${pay_rate:<10}{overtime:<10}${overtime_pay:<15.2f}${reg_pay:<15.2f}${gross_pay:<10.2f}')
