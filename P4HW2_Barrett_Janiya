@@ -10,32 +10,44 @@ Display overtime total, regular pay total, gross pay total, and number of employ
 Enter employee name or done to terminate program
 '''
 #Variables
+num_emp = 0
+total_ot = 0
+total_reg = 0
+total_gross = 0
+
 name = input("Enter employee's name or 'Done' to terminate: ")
-hours = float(input(f"How many hours did {name} work? "))
-pay_rate = float(input(f"What is {name}'s pay rate? "))
-overtime_rate = (pay_rate * 1.5)
+while name != "Done":
+    num_emp += 1
+    hours = float(input(f"How many hours did {name} work? "))
+    pay_rate = float(input(f"What is {name}'s pay rate? "))
+    overtime_rate = (pay_rate * 1.5)
 
-if hours > 40:
-    overtime = (hours - 40)
-    reg_hours = (hours - overtime)
-else:
-    overtime = 0
-    reg_hours = (hours - overtime)
+    if hours > 40:
+        overtime = (hours - 40)
+        reg_hours = (hours - overtime)
+    else:
+        overtime = 0
+        reg_hours = (hours - overtime)
 
-overtime_pay = (overtime * overtime_rate)
-reg_pay = (reg_hours * pay_rate)
-gross_pay = (reg_pay + overtime_pay)
+    overtime_pay = (overtime * overtime_rate)
+    reg_pay = (reg_hours * pay_rate)
+    gross_pay = (reg_pay + overtime_pay)
+    total_ot += overtime_pay
+    total_reg += reg_pay
+    total_gross += gross_pay
 
-print("----------------------------------------")
-print(f"Employee name: {name}")
+
+    print("----------------------------------------")
+    print(f"Employee name: {name}")
+    print()
+    print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'OverTime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<15}")
+    print("--------------------------------------------------------------------------------")
+    print(f'{hours:<15}${pay_rate:<10.2f}{overtime:<10}${overtime_pay:<15.2f}${reg_pay:<15.2f}${gross_pay:<10.2f}')
+    print()
+    name = input("Enter employee's name or 'Done' to terminate: ")
+
 print()
-print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'OverTime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<15}")
-print("--------------------------------------------------------------------------------")
-print(f'{hours:<15}${pay_rate:<10}{overtime:<10}${overtime_pay:<15.2f}${reg_pay:<15.2f}${gross_pay:<10.2f}')
-
-terminate = "Done"
-while terminate == "Done":
-    print(f'Total number of employees entered') #USE AN F STRING
-    print(f'Total amount paid for overtime: {overtime_pay}')
-    print(f'Total amount paid for regular hours: {reg_pay}')
-    print(f'Total amount paid in gross: {gross_pay}')
+print(f'Total number of employees entered: {num_emp}')
+print(f'Total amount paid for overtime: ${total_ot}')
+print(f'Total amount paid for regular hours: ${total_reg:.2f}')
+print(f'Total amount paid in gross: ${total_gross}')
