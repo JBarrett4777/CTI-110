@@ -1,0 +1,34 @@
+#Janiya Barrett
+# 4/8/24
+# P4HW2
+# Add on to P3HW2
+'''
+Asks the user to enter name of employee
+Ask user for pay rate and hours worked
+Calculate overpay and regular pay
+Display overtime total, regular pay total, gross pay total, and number of employees entered 
+Enter employee name or done to terminate program
+'''
+#Variables
+name = input("Enter employee's name or 'Done' to terminate: ")
+hours = float(input("Enter number of hours worked: "))
+pay_rate = float(input("Enter employee's pay rate: "))
+overtime_rate = (pay_rate * 1.5)
+
+if hours > 40:
+    overtime = (hours - 40)
+    reg_hours = (hours - overtime)
+else:
+    overtime = 0
+    reg_hours = (hours - overtime)
+
+overtime_pay = (overtime * overtime_rate)
+reg_pay = (reg_hours * pay_rate)
+gross_pay = (reg_pay + overtime_pay)
+
+print("----------------------------------------")
+print(f"Employee name: {name}")
+print()
+print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'OverTime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<15}")
+print("--------------------------------------------------------------------------------")
+print(f'{hours:<15}${pay_rate:<10}{overtime:<10}${overtime_pay:<15.2f}${reg_pay:<15.2f}${gross_pay:<10.2f}')
