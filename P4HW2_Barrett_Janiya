@@ -11,8 +11,8 @@ Enter employee name or done to terminate program
 '''
 #Variables
 name = input("Enter employee's name or 'Done' to terminate: ")
-hours = float(input("Enter number of hours worked: "))
-pay_rate = float(input("Enter employee's pay rate: "))
+hours = float(input(f"How many hours did {name} work? "))
+pay_rate = float(input(f"What is {name}'s pay rate? "))
 overtime_rate = (pay_rate * 1.5)
 
 if hours > 40:
@@ -32,3 +32,10 @@ print()
 print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'OverTime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<15}")
 print("--------------------------------------------------------------------------------")
 print(f'{hours:<15}${pay_rate:<10}{overtime:<10}${overtime_pay:<15.2f}${reg_pay:<15.2f}${gross_pay:<10.2f}')
+
+terminate = "Done"
+while terminate == "Done":
+    print(f'Total number of employees entered') #USE AN F STRING
+    print(f'Total amount paid for overtime: {overtime_pay}')
+    print(f'Total amount paid for regular hours: {reg_pay}')
+    print(f'Total amount paid in gross: {gross_pay}')
