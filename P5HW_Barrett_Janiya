@@ -68,7 +68,8 @@ def main():
     answer = input("Enter answer. ")
 
 main()
-'''
+
+
 
 def add_sum():
     import random
@@ -134,3 +135,17 @@ def main_menu():
     
 def main():
     main_menu()
+'''
+
+    def print_shipping_charge(item_weight):
+ if (item_weight > 0.0) and (item_weight <= 10.0): 
+ print(item_weight * 0.75)
+ elif (item_weight > 10.0) and (item_weight <= 15.0):
+ print(item_weight * 0.85)
+ elif (item_weight > 15.0) and (item_weight <= 20.0):
+ print(item_weight * 0.95)
+
+
+print_shipping_charge(18)
+print_shipping_charge(6)
+print_shipping_charge(25)
