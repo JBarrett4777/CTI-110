@@ -1,0 +1,45 @@
+#Janiya Barrett
+#2/28/24
+#P4HW1
+#Build off of P2HW2
+'''
+Ask user to enter for number of scores they would like to enter. 
+Create a loop to collect the number of scores the user wants to enter.
+Evaluate if the score is valid, it should be between 0 and 100 . 
+If it is not, notify the user and ask for a VALID score to be entered.
+'''
+grade_list = []
+scores = int(input("How many scores do you want to enter? "))
+
+for numbers in range(scores):
+    score = int(input(f"Enter score #{numbers+1}: "))
+    while score > 100 or score < 0: #Bad input
+        print("INVALID Score entered!!!!")
+        print("Score should be entered again")
+        score = int(input(f"Enter score #{numbers+1}: "))
+    grade_list.append(score)
+print(grade_list)
+ 
+print()
+print("------------Results------------")
+list_min = min(grade_list)
+print(f"Lowest Grade: {list_min}")
+grade_list.remove(list_min)
+print(f"Modified List: {grade_list}")
+list_max = max(grade_list)
+print(f"Highest Grade: {list_max}")
+grade_sum = sum(grade_list)
+list_length = len(grade_list)
+list_avg = grade_sum/list_length
+print(f"Scores Average: {list_avg:.2f}")
+
+if list_avg >= 90:
+    print("Grade: A")
+elif list_avg >= 80:
+    print("Grade: B")
+elif list_avg >= 70:
+    print("Grade: C")
+elif list_avg >= 60:
+    print("Grade: D")
+else:
+    print("Grade:F")
