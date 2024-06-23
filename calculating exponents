@@ -9,5 +9,23 @@ print()
 print(x,"raised to the power of", y, "is", answer,"!!")
 '''
 dict1 = {
-    'camaro': 18
+    'Camaro': 18.21,
+    'Prius': 52.36,
+    'Model S': 110,
+    'Silverado': 26
 }
+print(dict1.keys())
+print()
+key = input ("Enter vehicle to see mpg:")
+if key in dict1:
+    print()
+    print('The', key,'gets', dict1[key], 'mpg' )
+    print()
+    miles = input(f'How many miles will you drive the {key}?')
+else:
+    print('name not found')
+print()
+
+
+
+
